@@ -4,10 +4,14 @@ $(document).ready(function() {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
+  function getRandomRGB() {
+    return "rgb(" + getRandom8BitInt(0,256) + "," + getRandom8BitInt(0,256) + "," + getRandom8BitInt(0,256) + ")";
+  }
+
   function generateDots(num) {
     var dotArray = [];
     for (var i = 0; i < num; i++) {
-      var dotStyle = "background-color: rgb(" + getRandom8BitInt(0,256) + "," + getRandom8BitInt(0,256) + "," + getRandom8BitInt(0,256) + ");";
+      var dotStyle = "background-color: " + getRandomRGB();
       dotArray += "<div class='dot' style='" + dotStyle + "'></div>"
     }
     $('#dot-container').append(dotArray);
