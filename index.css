@@ -1,0 +1,29 @@
+body {
+  text-align: center;
+}
+
+section {
+  margin: 50px auto;
+  width: 150px;
+  display: inline-block;
+}
+
+.dot {
+  float:left;
+  background: black;
+  border-radius: 100%;
+  width: 4px;
+  height: 4px;
+}
+
+.expand {
+  width: 1px;
+  height: 75px;
+  border-radius: 0%;
+}
+
+img {
+  position: relative;
+  top: 100px;
+  width: 200px;
+}
