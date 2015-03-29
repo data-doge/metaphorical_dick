@@ -18,15 +18,15 @@ $(document).ready(function() {
   }
 
   var makeDotsScroll = function(speed) {
-    var i = 0
-    var dotArray = document.getElementsByClassName("dot")
-    var length = dotArray.length
+    var i = 0;
+    var dotArray = document.getElementsByClassName("dot");
+    var length = dotArray.length;
     window.setInterval(function() {
-      i < length ? i++ : i = 0
-      $(dotArray[i]).addClass("expand")
-      $(dotArray[i + length / 2]).addClass("expand")
-      $(dotArray[i-1]).removeClass("expand")
-    },speed);
+      i < length ? i++ : i = 0;
+      dotArray[i].classList.add('expand');
+      dotArray[i + length / 2].classList.add('expand');
+      dotArray[i-1].classList.remove('expand');
+    }, speed);
   }
 
   generateDots(1500);
