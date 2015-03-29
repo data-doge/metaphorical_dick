@@ -9,12 +9,12 @@ $(document).ready(function() {
   }
 
   function generateDots(num) {
-    var dotArray = [];
     for (var i = 0; i < num; i++) {
-      var dotStyle = "background-color: " + getRandomRGB();
-      dotArray += "<div class='dot' style='" + dotStyle + "'></div>"
+      var dot = document.createElement('DIV');
+      dot.className = 'dot';
+      dot.style.backgroundColor = getRandomRGB();
+      document.getElementById('dot-container').appendChild(dot);
     }
-    $('#dot-container').append(dotArray);
   }
 
   var makeDotsScroll = function(speed) {
