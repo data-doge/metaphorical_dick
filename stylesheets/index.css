@@ -9,7 +9,7 @@ section {
 }
 
 .dot {
-  float:left;
+  float: left;
   background: black;
   border-radius: 100%;
   width: 4px;

@@ -1,31 +1,23 @@
 $(document).ready(function() {
 
-  function getRandom8BitInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
-
-  function getRandomRGB() {
-    return "rgb(" + getRandom8BitInt(0,256) + "," + getRandom8BitInt(0,256) + "," + getRandom8BitInt(0,256) + ")";
-  }
-
   function generateDots(num) {
     for (var i = 0; i < num; i++) {
-      var dot = document.createElement('DIV');
-      dot.className = 'dot';
-      dot.style.backgroundColor = getRandomRGB();
-      document.getElementById('dot-container').appendChild(dot);
+      var $dot = $("<div class='dot'></div>").css({
+        background : randRGB()
+      });
+      $('#dot-container').append($dot);
     }
   }
 
   var makeDotsScroll = function(speed) {
-    var i = 0;
-    var dotArray = document.getElementsByClassName("dot");
-    var length = dotArray.length;
-    window.setInterval(function() {
-      i < length ? i++ : i = 0;
-      dotArray[i].classList.add('expand');
-      dotArray[i + length / 2].classList.add('expand');
-      dotArray[i-1].classList.remove('expand');
+    var i = 0
+    var $dots = $('.dot');
+    var length = $dots.length;
+    setInterval(function() {
+      i < length ? i++ : i = 0
+      $($dots[i]).addClass("expand")
+      $($dots[i + length / 2]).addClass("expand")
+      $($dots[i-1]).removeClass("expand")
     }, speed);
   }
 
