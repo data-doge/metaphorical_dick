@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).load(function() {
 
   function generateDots(num) {
     for (var i = 0; i < num; i++) {

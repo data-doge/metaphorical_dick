@@ -22,8 +22,27 @@ section {
   border-radius: 0%;
 }
 
-img {
+#pentagram {
   position: relative;
   top: 100px;
   width: 200px;
+}
+
+a {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 10px;
+  text-decoration: none;
+  z-index: 100;
+  color: black;
+  transition: 0.5s;
+}
+a:hover {
+  color: red;
+}
+#forkme {
+  display: block;
+  width: 40px;
+  height: 40px;
 }
